@@ -65,117 +65,42 @@ const CTISummitLanding: React.FC = () => {
 
   const speakers = [
     {
-      name: 'Jawad Khalid Mirza',
-      role: 'Chief Information Security Officer',
-      company: 'Askari Bank',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-      bio: 'Leading cybersecurity strategy for one of Pakistan\'s premier banking institutions. Expert in financial sector security, regulatory compliance, and protecting critical banking infrastructure from evolving cyber threats.',
-    },
-    {
       name: 'Muhammad Maad',
       role: 'Chief Information Security Officer',
       company: 'Faysal Bank',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
+      image: '/people/maad.jpeg',
       bio: 'Strategic security leader driving information security initiatives at Faysal Bank. Specializes in banking security frameworks, threat intelligence, and building resilient cybersecurity programs for financial institutions.',
     },
     {
       name: 'Muhammad Ali Manzer',
       role: 'Chief Information Security Officer',
       company: 'Bank of Punjab',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+      image: '/people/alimanzar.jpeg',
       bio: 'CISO responsible for safeguarding Bank of Punjab\'s digital assets and customer data. Expert in financial cybersecurity, risk management, and implementing comprehensive security controls in banking environments.',
-    },
-    {
-      name: 'Adnan Masood',
-      role: 'Group Head Information Security / CISO',
-      company: 'Bank AL Habib',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
-      bio: 'Group Head of Information Security overseeing enterprise-wide cybersecurity strategy at Bank AL Habib. Leader in financial sector security, regulatory compliance, and advanced threat protection for banking operations.',
-    },
-    {
-      name: 'Syed Tanveer Hussain',
-      role: 'Chief Information Security Officer',
-      company: 'Telenor Pakistan',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-      bio: 'CISO leading cybersecurity initiatives for Pakistan\'s leading telecommunications provider. Expert in telecom security, network protection, and securing critical communications infrastructure against sophisticated threats.',
-    },
-    {
-      name: 'Waqar Zaki',
-      role: 'Chief Information Security Officer',
-      company: 'Pakistan Stock Exchange (PSX)',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
-      bio: 'CISO protecting Pakistan\'s primary stock exchange infrastructure. Specialist in financial market security, trading system protection, and defending critical financial infrastructure from cyber attacks.',
-    },
-    {
-      name: 'Ali Habib',
-      role: 'Chief Information Security Officer',
-      company: 'PTCL Group (PTCL + Ufone)',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-      bio: 'CISO managing cybersecurity across PTCL Group\'s telecommunications and mobile operations. Expert in telecom security, cloud security, and protecting large-scale telecommunications infrastructure.',
     },
     {
       name: 'Dr. Haider Abbas',
       role: 'Director Cyber Security',
       company: 'NUST / National Research Leader',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
+      image: '/people/haiderabbas.jpeg',
       bio: 'Renowned cybersecurity researcher and Director at NUST. National research leader in cybersecurity, contributing to Pakistan\'s cybersecurity strategy, research, and development of next-generation security technologies.',
     },
     {
       name: 'Dr. Mehreen Afzal',
       role: 'Professor of Cyber Security & Former HoD',
       company: 'Air University',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
+      image: '/people/mehreenafzal.jpeg',
       bio: 'Distinguished Professor and former Head of Department at Air University. Leading academic in cybersecurity education, research, and developing the next generation of cybersecurity professionals in Pakistan.',
     },
     {
       name: 'Wahaj Siraj',
       role: 'Chief Executive Officer',
       company: 'Nayatel',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+      image: '/people/wahaj.jpeg',
       bio: 'CEO of Nayatel, Pakistan\'s leading fiber-optic telecommunications provider. Visionary leader in telecommunications security, infrastructure protection, and building secure, resilient network systems.',
-    },
-    {
-      name: 'Ammar Jaffri',
-      role: 'Former Additional DG FIA / President PISA',
-      company: 'Pakistan Information Security Association',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
-      bio: 'Former Additional Director General of FIA and current President of PISA. National cybersecurity leader with extensive experience in law enforcement, cybercrime investigation, and information security advocacy.',
-    },
-    {
-      name: 'Dr. Imran Rashid',
-      role: 'Head of Cybersecurity',
-      company: 'Jazz (VEON)',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-      bio: 'Head of Cybersecurity for Jazz, Pakistan\'s largest mobile network operator. Expert in telecommunications security, mobile network protection, and securing critical communications infrastructure at scale.',
-    },
-    {
-      name: 'Engr. Shariq Aziz',
-      role: 'Director Cybersecurity',
-      company: 'Ignite National Technology Fund',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
-      bio: 'Director of Cybersecurity at Ignite, Pakistan\'s national technology fund. Leader in national cybersecurity initiatives, technology innovation, and fostering cybersecurity innovation across Pakistan\'s tech ecosystem.',
-    },
-    {
-      name: 'Aftab Arshad',
-      role: 'Global Head of Cybersecurity',
-      company: 'Careem',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-      bio: 'Global Head of Cybersecurity for Careem, the region\'s leading ride-hailing platform. Expert in securing digital platforms, application security, and protecting large-scale consumer-facing technology services.',
     },
   ];
 
-  // Auto-slide for speakers carousel (pauses when dragging)
-  useEffect(() => {
-    if (autoSlidePaused || isDragging) return;
-    
-    const interval = setInterval(() => {
-      setCurrentSpeakerIndex((prev) => (prev + 1) % speakers.length);
-    }, 5000); // Auto-slide every 5 seconds
-
-    return () => clearInterval(interval);
-  }, [speakers.length, autoSlidePaused, isDragging]);
-
-  // Drag handlers
   const handleDragStart = (clientX: number) => {
     setIsDragging(true);
     setDragStartX(clientX);
@@ -557,7 +482,7 @@ const CTISummitLanding: React.FC = () => {
                   src={logoImage} 
                   alt="CISO Conclave Logo" 
                   className="w-full h-full object-contain drop-shadow-xl relative z-10"
-                  style={{ filter: 'drop-shadow(0 0 10px rgba(59, 158, 255, 0.3))' }}
+                  style={{ filter: '' }}
                 />
               </div>
               <span className="text-2xl md:text-3xl font-bold tracking-tight">

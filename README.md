@@ -1,255 +1,240 @@
-# TxWebsite - Trading Platform
+# CTI Summit 2025 - CISO Conclave Landing Page
 
-A full-stack trading platform with React frontend, Node.js/Express backend, MongoDB Atlas database, and Python trading bot integration.
+A modern, animated single-page landing website for the Cyber Threat Intelligence Summit 2025 - CISO Conclave event, featuring scroll-triggered animations, loading effects, and a beautiful responsive design.
 
 ## 🚀 Features
 
 ### Frontend
-- ✅ Modern React + TypeScript + Vite
-- ✅ Tailwind CSS with Dark/Light mode
-- ✅ Global State Management (Zustand)
-- ✅ Authentication System (JWT)
-- ✅ Protected Routes
-- ✅ Dashboard with Real-time Data
-- ✅ Responsive Design
+- ✅ Modern React 19 + TypeScript + Vite
+- ✅ Tailwind CSS with Dark Theme
+- ✅ Single-Page Application (SPA)
+- ✅ Scroll-Triggered Animations
+- ✅ Loading Screen with Animations
+- ✅ Responsive Design (Mobile, Tablet, Desktop)
+- ✅ Smooth Scroll Navigation
+- ✅ Interactive Hover Effects
+- ✅ Lucide React Icons
 
-### Backend
-- ✅ MVC Architecture
-- ✅ RESTful API
-- ✅ JWT Authentication
-- ✅ MongoDB Atlas Integration
-- ✅ User Management
-- ✅ Trade Management
-- ✅ Protected Routes & Middleware
+### Sections
+- ✅ Hero Section with Animated Background
+- ✅ Features Section
+- ✅ About Section with Central Topic & Theme
+- ✅ Featured Speakers Section
+- ✅ Event Schedule Section
+- ✅ Sponsors Section
+- ✅ Registration Form Section
+- ✅ Footer with Social Links
 
-### Trading Bot
-- ✅ Python-based Hedging Bot
-- ✅ MetaTrader 5 Integration
-- ✅ XAU/USD Trading Strategy
-- ✅ Risk Profile Management
+### Animations
+- ✅ Page Loading Animation
+- ✅ Intersection Observer for Scroll Animations
+- ✅ Staggered Card Animations
+- ✅ Fade-in and Slide-up Effects
+- ✅ Floating Background Orbs
+- ✅ Button Hover Effects
+- ✅ Smooth Transitions
 
 ## 📁 Project Structure
 
 ```
-TxWebsite/
+CTIsummit/
 ├── frontend/          # React + TypeScript frontend
 │   ├── src/
-│   │   ├── components/    # Reusable components
-│   │   ├── contexts/      # React contexts (Auth, Theme)
-│   │   ├── pages/         # Page components
-│   │   ├── services/      # API services
-│   │   ├── store/         # Zustand global state
-│   │   └── types/         # TypeScript types
+│   │   ├── pages/
+│   │   │   └── CTISummitLanding.tsx    # Main landing page component
+│   │   ├── App.tsx                     # App entry point
+│   │   ├── main.tsx                    # React DOM root
+│   │   └── index.css                   # Global styles & animations
+│   ├── public/                         # Static assets
+│   ├── index.html                      # HTML template
 │   └── package.json
 │
-├── backend/           # Node.js + Express backend
-│   ├── src/
-│   │   ├── config/        # Configuration (database, etc.)
-│   │   ├── controllers/   # Business logic
-│   │   ├── middleware/    # Custom middleware
-│   │   ├── models/        # Mongoose models
-│   │   ├── routes/        # API routes
-│   │   ├── utils/         # Utility functions
-│   │   └── server.js      # Entry point
-│   └── package.json
-│
-└── Hedging/          # Python trading bot
-    ├── bot.py        # Main bot logic
-    ├── config.py     # Bot configuration
-    └── requirements.txt
+└── README.md
 ```
 
 ## 🛠️ Setup Instructions
 
 ### Prerequisites
 - Node.js (v18 or higher)
-- Python 3.8+
-- MongoDB Atlas account
-- MetaTrader 5 (for bot)
+- npm or yarn
 
-### 1. Backend Setup
+### Installation
 
 ```bash
-cd backend
-
-# Install dependencies
-npm install
-
-# Create .env file
-cp .env.example .env
-
-# Edit .env with your MongoDB Atlas connection string
-# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/txwebsite
-# JWT_SECRET=your-secret-key
-# JWT_REFRESH_SECRET=your-refresh-secret
-# FRONTEND_URL=http://localhost:5173
-
-# Run development server
-npm run dev
-```
-
-Backend will run on `http://localhost:3000`
-
-### 2. Frontend Setup
-
-```bash
+# Navigate to frontend directory
 cd frontend
 
 # Install dependencies
 npm install
 
-# Create .env file (optional, defaults to localhost:3000)
-# VITE_API_BASE_URL=http://localhost:3000/api
-
 # Run development server
 npm run dev
 ```
 
-Frontend will run on `http://localhost:5173`
+The application will run on `http://localhost:5173`
 
-### 3. MongoDB Atlas Setup
-
-1. Go to [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-2. Create a free cluster
-3. Create a database user
-4. Whitelist your IP (or use `0.0.0.0/0` for development)
-5. Get connection string and add to backend `.env`
-
-### 4. Trading Bot Setup (Optional)
+### Build for Production
 
 ```bash
-cd Hedging
+# Build the project
+npm run build
 
-# Install Python dependencies
-pip install -r requirements.txt
-
-# Configure bot in config.py
-# Set MT5 credentials and trading parameters
-
-# Run bot
-python bot.py
+# Preview production build
+npm run preview
 ```
 
-## 📡 API Endpoints
+## 🎨 Design Features
 
-### Authentication
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - Login user
-- `POST /api/auth/refresh` - Refresh access token
-- `GET /api/auth/me` - Get current user (Protected)
-- `POST /api/auth/logout` - Logout (Protected)
-- `PUT /api/auth/profile` - Update profile (Protected)
+### Color Scheme
+- Primary Background: `#0A0E23` (Dark Navy)
+- Secondary Background: `#0F172A` (Darker Navy)
+- Accent Colors: Blue (`#3b82f6`) and Purple (`#8b5cf6`)
+- Text: White/Gray scale
 
-### Users
-- `GET /api/users` - Get all users (Admin only)
-- `GET /api/users/:id` - Get user (Protected)
-- `PUT /api/users/trading-account` - Update trading account (Protected)
+### Typography
+- Primary Font: Source Sans Pro
+- Display Font: Playfair Display (for headings)
 
-### Trades
-- `GET /api/trades` - Get all trades (Protected)
-- `GET /api/trades/:id` - Get single trade (Protected)
-- `POST /api/trades` - Create trade (Protected)
-- `PUT /api/trades/:id` - Update trade (Protected)
-- `GET /api/trades/stats` - Get trade statistics (Protected)
+### Animations
+- **Loading Screen**: Spinning shield icon with gradient text
+- **Hero Section**: Sequential fade-in animations with delays
+- **Sections**: Fade-up animations triggered on scroll
+- **Cards**: Staggered animations with individual delays
+- **Schedule Items**: Slide-in from left with progressive delays
+- **Buttons**: Scale and transform effects on hover
 
-## 🔐 Authentication Flow
+## 📱 Responsive Breakpoints
 
-1. User registers/logs in
-2. Backend returns JWT token + refresh token
-3. Frontend stores tokens in localStorage
-4. All protected API calls include `Authorization: Bearer <token>`
-5. Token refresh handled automatically
+- Mobile: < 640px
+- Tablet: 640px - 1024px
+- Desktop: > 1024px
 
-## 🎨 Frontend State Management
+## 🎯 Event Information
 
-- **AuthContext**: User authentication state
-- **ThemeContext**: Dark/Light mode
-- **Zustand Store**: Trading data (trades, stats)
+- **Event Name**: CTI Summit 2025 - CISO Conclave
+- **Date**: December 3, 2025
+- **Location**: Mcs Qasid Complex, Rawalpindi
+- **Duration**: 1 Day
+- **Target Audience**: Chief Information Security Officers, cybersecurity professionals, threat intelligence analysts
 
-## 🗄️ Database Models
+### Central Topic
+"Navigating the Evolving Cyber Threat Landscape: Strategic Intelligence, Proactive Defense, and Executive Leadership in the Age of Advanced Persistent Threats"
 
-### User
-- Email, password (hashed)
-- First name, last name
-- Role (user/admin)
-- Trading account settings
-- Refresh token
-
-### Trade
-- User reference
-- Symbol, type, lot size
-- Entry/exit prices
-- Stop loss, take profit
-- Status, profit, level
-- MT5 ticket reference
+### Theme & Scope
+- Strategic Threat Intelligence
+- Advanced Persistent Threats (APTs)
+- AI-Powered Security
+- Zero Trust Architecture
+- Incident Response & Crisis Management
+- Regulatory Compliance & Risk Management
+- Supply Chain Security
+- Executive Leadership
 
 ## 🚦 Running the Application
 
-1. Start MongoDB Atlas (cloud)
-2. Start backend: `cd backend && npm run dev`
-3. Start frontend: `cd frontend && npm run dev`
-4. Open browser: `http://localhost:5173`
+1. Install dependencies: `cd frontend && npm install`
+2. Start development server: `npm run dev`
+3. Open browser: `http://localhost:5173`
 
-## 📝 Environment Variables
+## 📝 Key Components
 
-### Backend (.env)
-```
-PORT=3000
-NODE_ENV=development
-MONGODB_URI=your-mongodb-connection-string
-JWT_SECRET=your-jwt-secret
-JWT_REFRESH_SECRET=your-refresh-secret
-JWT_EXPIRE=24h
-JWT_REFRESH_EXPIRE=7d
-FRONTEND_URL=http://localhost:5173
-```
+### CTISummitLanding Component
+Main landing page component featuring:
+- Loading state management
+- Scroll detection for navbar
+- Intersection Observer for section animations
+- All event sections and content
 
-### Frontend (.env)
-```
-VITE_API_BASE_URL=http://localhost:3000/api
-```
-
-## 🧪 Testing
-
-### Test Backend API
-```bash
-# Health check
-curl http://localhost:3000/api/health
-
-# Register user
-curl -X POST http://localhost:3000/api/auth/register \
-  -H "Content-Type: application/json" \
-  -d '{"email":"test@example.com","password":"password123","firstName":"Test","lastName":"User"}'
-```
+### Animation System
+- Uses Intersection Observer API for performance
+- CSS transitions and transforms
+- Staggered delays for sequential animations
+- Smooth scroll behavior
 
 ## 📚 Tech Stack
 
 ### Frontend
-- React 19
-- TypeScript
-- Vite
-- Tailwind CSS
-- Zustand
-- React Router
+- **React 19.1.1** - UI library
+- **TypeScript 5.8.3** - Type safety
+- **Vite 7.1.6** - Build tool and dev server
+- **Tailwind CSS 3.4.17** - Utility-first CSS framework
+- **Lucide React 0.544.0** - Icon library
+- **React Router DOM 7.9.1** - Routing (for navigation)
 
-### Backend
-- Node.js
-- Express
-- MongoDB (Mongoose)
-- JWT
-- bcryptjs
+### Development Tools
+- **ESLint** - Code linting
+- **TypeScript ESLint** - TypeScript-specific linting
+- **PostCSS** - CSS processing
+- **Autoprefixer** - CSS vendor prefixing
 
-### Bot
-- Python 3.8+
-- MetaTrader5
-- Custom Hedging Strategy
+## 🎬 Animation Details
+
+### Loading Animation
+- Duration: 1.5 seconds
+- Spinning border with shield icon
+- Gradient text pulse
+- Smooth fade-out transition
+
+### Scroll Animations
+- Trigger: When section enters viewport (50px margin)
+- Duration: 1000ms for sections, 700ms for cards
+- Effects: Fade + Translate (up/down/left/right)
+- Stagger: 50-150ms delays between items
+
+### Hover Effects
+- Buttons: Scale to 105% with arrow slide
+- Cards: Lift up 8px with enhanced shadow
+- Smooth transitions: 300ms cubic-bezier
+
+## 🔧 Customization
+
+### Update Event Details
+Edit `frontend/src/pages/CTISummitLanding.tsx`:
+- Change date, location, speakers
+- Update schedule items
+- Modify sponsors
+- Edit central topic and theme
+
+### Styling
+- Global styles: `frontend/src/index.css`
+- Tailwind config: `frontend/tailwind.config.js`
+- Component styles: Inline Tailwind classes
+
+### Colors
+Update color scheme in:
+- Component classes (bg-[#0A0E23], etc.)
+- CSS custom properties (if added)
+- Tailwind config for theme colors
+
+## 📦 Build Output
+
+Production build creates optimized files in `frontend/dist/`:
+- Minified JavaScript
+- Optimized CSS
+- Compressed assets
+- HTML with asset references
+
+## 🚀 Deployment
+
+### Netlify
+The project includes `netlify.toml` for easy Netlify deployment:
+```bash
+npm run build
+# Deploy dist/ folder to Netlify
+```
+
+### Other Platforms
+1. Build: `npm run build`
+2. Upload `dist/` folder to your hosting provider
+3. Configure SPA routing (all routes → index.html)
 
 ## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Submit a pull request
+4. Test thoroughly
+5. Submit a pull request
 
 ## 📄 License
 
@@ -257,5 +242,15 @@ This project is private and proprietary.
 
 ## 🆘 Support
 
-For issues or questions, please contact the development team.
+For issues or questions about the CTI Summit 2025 landing page, please contact the development team.
 
+## 📅 Event Details
+
+**CTI Summit 2025 - CISO Conclave**
+- Date: December 3, 2025
+- Location: Mcs Qasid Complex, Rawalpindi
+- Website: [Your Website URL]
+
+---
+
+Built with ❤️ for CTI Summit 2025
